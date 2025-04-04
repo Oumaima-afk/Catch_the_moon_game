@@ -1,0 +1,30 @@
+/* index */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgb(172, 252, 252);
+}
+
+.players {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  width: 400px;
+  height: 500px;
+  background-color: rgb(176, 120, 230);
+  border: 5px solid #333;
+}
+
+.player-1,
+.player-2,
+.player-3,
+.player-4 {
+  width: 40%;
+  height: 40%;
+  margin: 10px;
+  border: 1px solid black;
+}

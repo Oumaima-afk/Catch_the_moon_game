@@ -1,0 +1,42 @@
+/* game */
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgb(172, 252, 252);
+}
+
+.game-area {
+  position: relative;
+  width: 400px;
+  height: 500px;
+  background-color: rgb(176, 120, 230);
+  border: 5px solid #333;
+  overflow: hidden; /*empecher les éléments en dehors d'être visibles*/
+}
+
+.player {
+  position: absolute;
+  bottom: 10px;
+  left: 0px;
+  right: 0px;
+  width: 40px;
+  height: 40px;
+  background-color: rgb(150, 20, 20);
+}
+
+.score {
+  position: absolute;
+  font-size: 1.2rem;
+  left: 10px;
+  top: 10px;
+}
+
+.life {
+  position: absolute;
+  font-size: 1.2rem;
+  left: 10px;
+  top: 35px;
+}
