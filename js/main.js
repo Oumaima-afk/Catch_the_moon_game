@@ -7,13 +7,14 @@ const gameArea = document.querySelector(".game-area");
 const scoreEl = document.querySelector(".score");
 const lifeNb = document.querySelector(".life");
 
+console.log(player, gameArea);
+
 // Calculer la position centrale
 const middle = (gameArea.offsetWidth - player.offsetWidth) / 2;
 // Placer le joueur au milieu
 player.style.left = `${middle}px`;
 
 const maxLimite = gameArea.offsetWidth - player.offsetWidth - 10;
-// const maxLimite = 360;
 
 document.addEventListener("keydown", handleKeypress);
 
@@ -126,3 +127,26 @@ function gameOver() {
 }
 
 setInterval(createFallingObjects, 2500);
+
+// ETAPE 3 : changer d'animal
+const animalElements = document.querySelectorAll(".animal");
+
+animalElements.forEach((animal) => {
+  animal.addEventListener("click", () => {
+    const animalId = animal.dataset.animal;
+    // changement de page
+    window.location.href = `game.html?animal=${animalId}`;
+  });
+});
+
+// faire le changement d'image
+const params = new URLSearchParams(window.location.search);
+const animal = params.get("animal");
+
+console.log("Animal paramètre reçu :", animal);
+
+if (animal) {
+  const imageElement = document.getElementById("selected-animal");
+  imageElement.src = `../assets/${animal}.png`;
+  imageElement.alt = animal;
+}
