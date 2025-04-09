@@ -122,7 +122,21 @@ function createFallingObjects() {
 
 function gameOver() {
   gameIsOver = true;
-  alert(`Game over... Votre score est : ${score}`);
+
+  // Afficher un écran de fin
+  const gameOverScreen = document.createElement("div");
+  gameOverScreen.classList.add("game-over");
+  gameOverScreen.innerHTML = `
+  <h1>Game over</h1>
+  <p>Final score : <strong>${score}</strong></p>
+  <button onclick = "restartGame()">Play again</button>`;
+
+  // Ajouter l'écran au body
+  document.body.appendChild(gameOverScreen);
+}
+
+// Pour rejouer
+function restartGame() {
   window.location.reload();
 }
 

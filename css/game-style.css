@@ -15,7 +15,7 @@
   font-size: 1.2rem;
   left: 50%;
   top: 15px;
-  transform: translateX(-50%); /* Centre horizontalement */
+  transform: translateX(-50%);
 }
 
 .life {
@@ -26,6 +26,15 @@
 }
 
 .home-icon {
+  position: absolute;
+  width: 27px;
+  right: 55px;
+  top: 10px;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+
+.characters-icon {
   position: absolute;
   width: 27px;
   right: 20px;
@@ -71,7 +80,51 @@ body {
 .falling-object {
   position: absolute;
   top: 0;
-  width: 40px;
-  height: 40px;
-  filter: drop-shadow(0 0.2rem 0.25rem rgba(250, 171, 0, 0.836));
+  width: 35px;
+  filter: drop-shadow(0 0.2rem 0.25rem rgba(250, 171, 0, 0.8));
+}
+
+/* Ecran de fin */
+
+.game-over {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.game-over h1 {
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+  color: #c0d4f9;
+}
+
+.game-over p {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.game-over button {
+  box-shadow: rgba(235, 234, 234, 0.3) 0px 5px 8px,
+    rgba(218, 218, 218, 0.22) 0px 5px 2px;
+  background-color: #c0d4f9;
+  border: 3px solid #5678c8;
+  color: #042c5d;
+  border-radius: 15px;
+  width: 70%;
+  height: 10%;
+  font-size: 1rem;
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.game-over button:hover {
+  transform: scale(1.05);
 }

@@ -20,8 +20,7 @@ body {
   justify-content: center;
   width: 400px;
   height: 500px;
-  background-color: rgb(221, 154, 180);
-  /* border: 1px solid rgb(55, 0, 71); */
+  background-color: #80a6f0;
   border-radius: 10px;
   box-shadow: rgba(99, 99, 99) 0px 2px 8px 0px;
   overflow: hidden;
@@ -31,12 +30,12 @@ body {
   margin-bottom: 0.9rem;
   width: 94%;
   height: 88%;
-  border: 3px solid rgb(64, 16, 78);
+  border: 3px solid #042c5d;
   border-radius: 5px;
-  background-image: url(../assets/game-area-background.jpg);
-  background-size: 250%;
-  background-position: center;
+  background-image: url(../assets/blue-background.png);
+  background-size: cover;
   background-repeat: no-repeat;
+  background-position: bottom center;
 }
 
 .game-title {
@@ -44,7 +43,7 @@ body {
   text-transform: uppercase;
   top: 7px;
   font-size: 1.5rem;
-  color: #4a3f55;
+  color: #042c5d;
 }
 
 .home__choice-text {
@@ -53,17 +52,19 @@ body {
   padding-top: 1rem;
   padding-bottom: 1.5rem;
   font-size: 2rem;
+  color: #c0d4f9;
 }
 
 .player-content {
-  display: grid;
-  justify-items: center;
+  display: flex;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .player-content img {
-  filter: drop-shadow(0.1rem 0.2rem 0.5rem rgba(252, 229, 184, 0.9));
+  filter: drop-shadow(0.1rem 0.2rem 0.5rem rgb(192, 212, 249, 0.8));
 
   width: 150px;
   height: auto;
