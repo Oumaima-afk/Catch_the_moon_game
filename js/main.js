@@ -55,7 +55,7 @@ function updateLifeDisplay() {
 }
 updateLifeDisplay();
 
-// Handle the creation of falling objects
+// Les objets qui tombent
 function createFallingObjects() {
   // Si le jeu est finit les objets arretent de tomber
   if (gameIsOver) return;
@@ -88,10 +88,11 @@ function createFallingObjects() {
     objectPosition += 5;
     object.style.top = objectPosition + "px";
 
-    // Détécter s'il touche le player
+    // Récupère les positions du joueur et de l'objet
     const playerRect = player.getBoundingClientRect();
     const objectRect = object.getBoundingClientRect();
 
+    // Vérifier la collision entre les 2
     if (
       objectRect.bottom >= playerRect.top &&
       objectRect.left <= playerRect.right &&
